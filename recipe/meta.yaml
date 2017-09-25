@@ -7,7 +7,7 @@ package:
 source:
     url: https://github.com/silx-kit/fabio/archive/v{{ version }}.tar.gz
     fn: fabio-v{{ version }}.tar.gz
-    sha256: ae1f2f979f801524558cac81ec8988d1eadce65b540cdeb46166162ae4788956
+    sha256: 597bbd3c551687e98d84fe89b9fa87eca2a726fbbed56e841168119efd95baf9
 
 build:
     number: 0
