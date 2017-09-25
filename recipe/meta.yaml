@@ -17,14 +17,14 @@ requirements:
     build:
         - python
         - setuptools
-        - numpy x.x
+        - numpy 1.10.*
         - cython
         # could use opencl, but need the package on conda-forge first
         # - opencl
 
     run:
         - python
-        - numpy x.x
+        - numpy >=1.10
 
 test:
     imports:
