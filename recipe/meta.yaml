@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
     name: fabio
@@ -10,8 +10,6 @@ source:
     sha256: ae1f2f979f801524558cac81ec8988d1eadce65b540cdeb46166162ae4788956
 
 build:
-    # fixed upstream: https://github.com/silx-kit/fabio/pull/105. Can remove this skip line in the next release
-    skip: True  # [win and py36] 
     number: 0
     script: python setup.py install --single-version-externally-managed --record=record.txt
 
