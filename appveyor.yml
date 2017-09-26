@@ -6,68 +6,32 @@ environment:
 
   BINSTAR_TOKEN:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    secure: ipv/06DzgA7pzz2CIAtbPxZSsphDtF+JFyoWRnXkn3O8j7oRe3rzqj3LOoq2DZp4
+    secure: MP4hZYylDyUWEsrt3u3cod2sbFeRwUziH02mvQOdbjsTO/l1yIxDkP/76rSIjcGC
 
   matrix:
     - TARGET_ARCH: x86
-      CONDA_NPY: 111
       CONDA_PY: 27
       CONDA_INSTALL_LOCN: C:\\Miniconda
 
     - TARGET_ARCH: x64
-      CONDA_NPY: 111
       CONDA_PY: 27
       CONDA_INSTALL_LOCN: C:\\Miniconda-x64
 
     - TARGET_ARCH: x86
-      CONDA_NPY: 112
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda
-
-    - TARGET_ARCH: x64
-      CONDA_NPY: 112
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda-x64
-
-    - TARGET_ARCH: x86
-      CONDA_NPY: 113
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda
-
-    - TARGET_ARCH: x64
-      CONDA_NPY: 113
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda-x64
-
-    - TARGET_ARCH: x86
-      CONDA_NPY: 111
       CONDA_PY: 35
       CONDA_INSTALL_LOCN: C:\\Miniconda35
 
     - TARGET_ARCH: x64
-      CONDA_NPY: 111
       CONDA_PY: 35
       CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
 
     - TARGET_ARCH: x86
-      CONDA_NPY: 112
-      CONDA_PY: 35
-      CONDA_INSTALL_LOCN: C:\\Miniconda35
+      CONDA_PY: 36
+      CONDA_INSTALL_LOCN: C:\\Miniconda36
 
     - TARGET_ARCH: x64
-      CONDA_NPY: 112
-      CONDA_PY: 35
-      CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
-
-    - TARGET_ARCH: x86
-      CONDA_NPY: 113
-      CONDA_PY: 35
-      CONDA_INSTALL_LOCN: C:\\Miniconda35
-
-    - TARGET_ARCH: x64
-      CONDA_NPY: 113
-      CONDA_PY: 35
-      CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
+      CONDA_PY: 36
+      CONDA_INSTALL_LOCN: C:\\Miniconda36-x64
 
 
 # We always use a 64-bit machine, but can build x86 distributions
