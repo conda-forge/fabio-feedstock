@@ -10,21 +10,23 @@ source:
     sha256: f2ba37584fe39e051cff89a61f13615a973e4bdc6f35979011057a1f9305d784
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
     build:
+        - {{ compiler('c') }}
+    host:
         - python
         - setuptools
-        - numpy 1.11.*
+        - numpy
         - cython
         # could use opencl, but need the package on conda-forge first
         # - opencl
 
     run:
         - python
-        - numpy >=1.11
+        - {{ pin_compatible('numpy') }}
 
 test:
     imports:
