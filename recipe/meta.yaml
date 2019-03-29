@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
     name: fabio
@@ -7,10 +7,10 @@ package:
 source:
     url: https://github.com/silx-kit/fabio/archive/v{{ version }}.tar.gz
     fn: fabio-v{{ version }}.tar.gz
-    sha256: ddc0ed7b099d4a60aa391631146d1e8fb67aa6ffaeb5d90ce0560b58a574358f
+    sha256: 5f3971b7d8a22410eab6eedb5725271304708feaa54a0fcb941ea54d3aa394d9
 
 build:
-    number: 1000
+    number: 0
     script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
