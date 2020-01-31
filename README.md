@@ -3,7 +3,7 @@ About fabio
 
 Home: https://github.com/silx-kit/fabio
 
-Package license: GPL v3.0, GPL v2.0, MIT, GPL, LGPL v3.0, BSD 3-Clause, Apache 2.0
+Package license: MIT, LGPL v3.0
 
 Feedstock license: BSD 3-Clause
 
@@ -221,7 +221,9 @@ Feedstock Maintainers
 * [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@dmpelt](https://github.com/dmpelt/)
 * [@ericdill](https://github.com/ericdill/)
+* [@kif](https://github.com/kif/)
 * [@licode](https://github.com/licode/)
+* [@t20100](https://github.com/t20100/)
 * [@tacaswell](https://github.com/tacaswell/)
 * [@tschoonj](https://github.com/tschoonj/)
 * [@vallsv](https://github.com/vallsv/)
