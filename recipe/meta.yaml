@@ -10,7 +10,7 @@ source:
     sha256: 5f3971b7d8a22410eab6eedb5725271304708feaa54a0fcb941ea54d3aa394d9
 
 build:
-    number: 1
+    number: 2
     script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
@@ -22,12 +22,14 @@ requirements:
         - setuptools
         - numpy
         - cython
-        # could use opencl, but need the package on conda-forge first
-        # - opencl
-
+     
     run:
         - python
         - {{ pin_compatible('numpy') }}
+        - pillow
+        - lxml
+        - glymur <0.9  # [py2k]
+        - glymur  # [py3k]
 
 test:
     imports:
@@ -37,7 +39,7 @@ test:
 
 about:
     home: https://github.com/silx-kit/fabio
-    license: GPL v3.0, GPL v2.0, MIT, GPL, LGPL v3.0, BSD 3-Clause, Apache 2.0
+    license: MIT, LGPL v3.0
     summary: I/O library for images produced by 2D X-ray detector
     license_family: Other
     license_file: copyright
@@ -51,3 +53,5 @@ extra:
         - CJ-Wright
         - tschoonj
         - vallsv
+        - t20100
+        - kif
