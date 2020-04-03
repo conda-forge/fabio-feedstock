@@ -1,57 +1,57 @@
 {% set name = "fabio" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
-    name: "{{ name }}"
-    version: "{{ version }}"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-    sha256: e8f357e24a7c128d9f9c01981de14fd092c9a4adf9896251402ca4d2fa382d1e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d3a21a20e6763f934e5eb51fe91bb96f171c109442898659daab3a7c69fff6b0
 
 build:
-    number: 3
-    script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
-    build:
-        - {{ compiler('c') }}
-    host:
-        - python
-        - pip
-        - setuptools
-        - numpy
-        - cython
-     
-    run:
-        - python
-        - {{ pin_compatible('numpy') }}
-        - pillow
-        - lxml
-        - glymur <0.9  # [py2k]
-        - glymur  # [py3k]
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - setuptools
+    - numpy
+    - cython
+
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - pillow
+    - lxml
+    - glymur <0.9      # [py2k]
+    - glymur      # [py3k]
 
 test:
-    imports:
-        - fabio
-        - fabio.test
-        - fabio.third_party
+  imports:
+    - fabio
+    - fabio.test
+    - fabio.third_party
 
 about:
-    home: https://github.com/silx-kit/fabio
-    license: MIT, LGPL v3.0
-    summary: I/O library for images produced by 2D X-ray detector
-    license_family: Other
-    license_file: copyright
+  home: https://github.com/silx-kit/fabio
+  license: MIT, LGPL v3.0
+  summary: I/O library for images produced by 2D X-ray detector
+  license_family: Other
+  license_file: copyright
 
 extra:
-    recipe-maintainers:
-        - ericdill
-        - licode
-        - tacaswell
-        - dmpelt
-        - CJ-Wright
-        - tschoonj
-        - vallsv
-        - t20100
-        - kif
+  recipe-maintainers:
+    - ericdill
+    - licode
+    - tacaswell
+    - dmpelt
+    - CJ-Wright
+    - tschoonj
+    - vallsv
+    - t20100
+    - kif
