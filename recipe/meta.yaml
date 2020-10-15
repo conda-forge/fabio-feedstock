@@ -28,8 +28,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pillow
     - lxml
-    - glymur <0.9      # [py2k]
-    - glymur      # [py3k]
+    - glymur
 
 test:
   imports:
