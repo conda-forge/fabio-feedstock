@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04dbb312b42462dfe09685ce9ff1d7494639eef3f2a32e2ed0bb8ee284f865bc
+  sha256: 42d2b04cc602a018bda1a6822725a75148674ab561410a0f99036dd9361c624a
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
@@ -38,7 +38,7 @@ test:
 
 about:
   home: https://github.com/silx-kit/fabio
-  license: MIT, LGPL v3.0
+  license: MIT AND LGPL-3.0-or-later
   summary: I/O library for images produced by 2D X-ray detector
   license_family: Other
   license_file: copyright
