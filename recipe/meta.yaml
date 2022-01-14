@@ -38,7 +38,7 @@ test:
 
 about:
   home: https://github.com/silx-kit/fabio
-  license: MIT, LGPL v3.0
+  license: MIT AND LGPL-3.0-or-later
   summary: I/O library for images produced by 2D X-ray detector
   license_family: Other
   license_file: copyright
