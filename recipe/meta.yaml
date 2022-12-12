@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "0.14.0" %}
+{% set version = "2022.12.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 72ab0cb7247ec97dc552447112a54cd77b5fbe6f5ede8fc9b070e4e1c13cf01e
+  sha256: f48899a205e014cb4812a27c982927cb7d563bc40dc1285f2c84cfbb6f4955d3
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
