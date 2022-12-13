@@ -23,7 +23,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - meson-python
     - numpy
     - cython
 
