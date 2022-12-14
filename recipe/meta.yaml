@@ -12,8 +12,8 @@ source:
 build:
   number: 0
   script: 
-    - {{ PYTHON }} -m build --wheel -n
-    - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
+    - {{ PYTHON }} setup.py install
+#    - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
 #    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
