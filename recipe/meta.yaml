@@ -10,7 +10,7 @@ source:
   sha256: 668287dbb4c7c3042a404c80617bd6be9861a3ff50118a5a2b385f8a285f62bc
 
 build:
-  number: 0
+  number: 1
   script: 
     - {{ PYTHON }} setup.py bdist_wheel
     - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
@@ -26,7 +26,7 @@ requirements:
   host:
     - python
     - pip
-    - build
+    - python-build
     - setuptools
     - meson-python
     - ninja
