@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "2022.12.1" %}
+{% set version = "2023.4.0" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 668287dbb4c7c3042a404c80617bd6be9861a3ff50118a5a2b385f8a285f62bc
+  sha256: c77fcec19e6fd749b95f1033d24f92ee7277a495707da8f23897a9acabcbdc48
 
 build:
-  number: 1
-  script: 
+  number: 0
+  script:
     - {{ PYTHON }} setup.py bdist_wheel
     - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
 #    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
