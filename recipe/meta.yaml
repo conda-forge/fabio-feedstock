@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "2023.4.1" %}
+{% set version = "2023.6.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2f3b9ba7471552db0a8c2f2e8b1cf6edfd47029523d704593863a0941ba67c3e
+  sha256: b7b3761c965d99729712460c7043b283780157ca1fd3f7b275666a9eed6b4257
 
 build:
   number: 0
