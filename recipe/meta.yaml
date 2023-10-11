@@ -10,7 +10,7 @@ source:
   sha256: 2f3b9ba7471552db0a8c2f2e8b1cf6edfd47029523d704593863a0941ba67c3e
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} setup.py bdist_wheel
     - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
