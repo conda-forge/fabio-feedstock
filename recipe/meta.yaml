@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [python_impl == "pypy"]
   script:
     - {{ PYTHON }} setup.py bdist_wheel
     - {{ PYTHON }} -m pip install --pre --find-links dist/  --no-cache-dir --no-index --no-deps --ignore-installed -vv fabio
