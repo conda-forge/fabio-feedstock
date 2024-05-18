@@ -10,7 +10,7 @@ source:
   sha256: 34f571bb8b19ee122fac7ae1d6245a92b69ae5f8f57149c7db9f6d4c307244d7
 
 build:
-  number: 0
+  number: 1
   skip: true  # [python_impl == "pypy"]
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - pkg-config                             # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - python-build
@@ -36,7 +37,6 @@ requirements:
     - tomli >=1.0.0
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - h5py
     - hdf5plugin
     - lxml
