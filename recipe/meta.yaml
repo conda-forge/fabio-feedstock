@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "2024.9.0" %}
+{% set version = "2025.10.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f873df51f468531c11aae7e0cd88a14f221f4ef09431fbc5a6ca67b1ed47535b
+  sha256: c19763bcfa02a78a507f3d914b564a8997c88a6aa7b4f87f9db4ce7fa397d256
 
 build:
-  number: 2
+  number: 0
   skip: true  # [python_impl == "pypy"]
 
 requirements:
