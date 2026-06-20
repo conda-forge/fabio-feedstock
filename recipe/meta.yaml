@@ -1,5 +1,5 @@
 {% set name = "fabio" %}
-{% set version = "2025.10.0" %}
+{% set version = "2026.6.0" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c19763bcfa02a78a507f3d914b564a8997c88a6aa7b4f87f9db4ce7fa397d256
+  sha256: d18193b37c61af83add793c5619dc02d22f3a4e54c448f7bad89f97d0949f4ff
 
 build:
-  number: 1
-  skip: true  # [python_impl == "pypy"]
+  number: 0
+  skip: true  # [python_impl == "pypy", py<311]
 
 requirements:
   build:
@@ -35,6 +35,7 @@ requirements:
     - numpy
     - pyproject-metadata >=0.5.0
     - tomli >=1.0.0
+    - filelock
   run:
     - python
     - h5py
@@ -42,6 +43,7 @@ requirements:
     - lxml
     - pillow
     - glymur
+    - qtpy
 
 test:
   imports:
